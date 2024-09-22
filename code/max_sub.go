@@ -869,13 +869,79 @@ func findMaximumNumber(k int64, x int) int64 {
 	})
 	return int64(ans)
 }
-func maxThree(num1 int, num2 int, num3 int) int {
-	max := num1
-	if max < num2 {
-		max = num2
+func countWays(nums []int) int {
+	sort.Ints(nums)
+	ans := 0
+	if nums[0] > 0 {
+		ans++
 	}
-	if max < num3 {
-		max = num3
+	for i := 1; i < len(nums); i++ {
+		if nums[i] > i && nums[i-1] < i {
+			ans++
+		}
+	}
+	if nums[len(nums)-1] < len(nums) {
+		ans++
+	}
+	return ans
+}
+func maxStrength(nums []int) int64 {
+	mn, mx := nums[0], nums[0]
+	for _, x := range nums[1:] {
+		mn, mx = minFour(mn, x, mn*x, mx*x),
+			maxFour(mx, x, mn*x, mx*x)
+	}
+	return int64(mx)
+}
+
+// 实现 min 函数
+func minFour(a, b, c, d int) int {
+	min := a
+	if b < min {
+		min = b
+	}
+	if c < min {
+		min = c
+	}
+	if d < min {
+		min = d
+	}
+	return min
+}
+
+// 实现 max 函数
+func maxFour(a, b, c, d int) int {
+	max := a
+	if b > max {
+		max = b
+	}
+	if c > max {
+		max = c
+	}
+	if d > max {
+		max = d
 	}
 	return max
+}
+
+func maxThree(num1 int, num2 int, num3 int) int {
+	maxNum := num1
+	if maxNum < num2 {
+		maxNum = num2
+	}
+	if maxNum < num3 {
+		maxNum = num3
+	}
+	return maxNum
+}
+
+func minThree(num1 int, num2 int, num3 int) int {
+	minNum := num1
+	if minNum > num2 {
+		minNum = num2
+	}
+	if minNum > num3 {
+		minNum = num3
+	}
+	return minNum
 }
