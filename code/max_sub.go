@@ -885,6 +885,62 @@ func countWays(nums []int) int {
 	}
 	return ans
 }
+
+var res []int
+
+var minShortestDistance int = math.MaxInt
+
+func shortestDistanceAfterQueries(n int, queries [][]int) []int {
+	res = make([]int, len(queries))
+	minShortestDistance = n - 1
+	for i := 0; i < len(queries); i++ {
+		cur := 0
+		dfsShortestDistance(n, queries[i], i, cur)
+		res[i] = min(cur, minShortestDistance)
+	}
+	return res
+}
+func resultsArray(nums []int, k int) []int {
+	numsDp := make([][]int, len(nums))
+	for i := range numsDp {
+		numsDp[i] = make([]int, len(nums))
+	}
+	for i := range nums {
+		for j := i; j < len(nums); j++ {
+			if i == j {
+				numsDp[i][j] = 1
+			} else if nums[j]-nums[j-1] == 1 {
+				numsDp[i][j] = numsDp[i][j-1]
+			} else {
+				numsDp[i][j] = -1
+			}
+		}
+	}
+	dp := make([]int, len(nums)-k+1)
+	for i := range dp {
+		if numsDp[i+k-1][i] == 1 {
+			dp[i] = nums[i+k-1]
+		} else {
+			dp[i] = -1
+		}
+	}
+	return dp
+}
+func dfsShortestDistance(n int, ints []int, i int, cur int) {
+	if res[i] != 0 {
+		cur = min(res[i], minShortestDistance)
+	}
+	if i < n {
+		cur += 1
+	} else {
+		return
+	}
+	if i == ints[0] {
+		dfsShortestDistance(n, ints, i+ints[1], cur)
+	} else {
+		dfsShortestDistance(n, ints, i+1, cur)
+	}
+}
 func maxStrength(nums []int) int64 {
 	mn, mx := nums[0], nums[0]
 	for _, x := range nums[1:] {
@@ -892,6 +948,45 @@ func maxStrength(nums []int) int64 {
 			maxFour(mx, x, mn*x, mx*x)
 	}
 	return int64(mx)
+}
+
+func twoEggDrop(n int) int {
+	dp := make([]int, n+1)
+	for i := range dp {
+		dp[i] = math.MaxInt32 / 2
+	}
+	dp[0] = 0
+	for i := 1; i <= n; i++ {
+		for k := 1; k <= i; k++ {
+			dp[i] = min(dp[i], max(k-1, dp[i-k])+1)
+		}
+	}
+	return dp[n]
+}
+
+func minMovesToCaptureTheQueen(a int, b int, c int, d int, e int, f int) int {
+	// 车与皇后处在同一行，且中间没有象
+	if a == e && (c != a || d <= min(b, f) || d >= max(b, f)) {
+		return 1
+	}
+	// 车与皇后处在同一列，且中间没有象
+	if b == f && (d != b || c <= min(a, e) || c >= max(a, e)) {
+		return 1
+	}
+	// 象、皇后处在同一条对角线，且中间没有车
+	if abs(c-e) == abs(d-f) && ((c-e)*(b-f) != (a-e)*(d-f) || a < min(c, e) || a > max(c, e)) {
+		return 1
+	}
+	return 2
+}
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
+func maxVowels(s string, k int) int {
+	return 0
 }
 
 // 实现 min 函数
