@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LeetcodeEditorlabuladong">
+    <option name="projectConfig">
+      <map>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[1052]爱生气的书店老板.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[1052]爱生气的书店老板.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1052" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[1052]爱生气的书店老板.go" />
+              <option name="titleSlug" value="grumpy-bookstore-owner" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[1343]大小为 K 且平均值大于等于阈值的子数组数目.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[1343]大小为 K 且平均值大于等于阈值的子数组数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1343" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[1343]大小为 K 且平均值大于等于阈值的子数组数目.go" />
+              <option name="titleSlug" value="number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[1456]定长子串中元音的最大数目.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[1456]定长子串中元音的最大数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1456" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[1456]定长子串中元音的最大数目.go" />
+              <option name="titleSlug" value="maximum-number-of-vowels-in-a-substring-of-given-length" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[1884]鸡蛋掉落-两枚鸡蛋.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[1884]鸡蛋掉落-两枚鸡蛋.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1884" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[1884]鸡蛋掉落-两枚鸡蛋.go" />
+              <option name="titleSlug" value="egg-drop-with-2-eggs-and-n-floors" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[2090]半径为 k 的子数组平均值.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[2090]半径为 k 的子数组平均值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2090" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[2090]半径为 k 的子数组平均值.go" />
+              <option name="titleSlug" value="k-radius-subarray-averages" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[2708]一个小组的最大实力值.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[2708]一个小组的最大实力值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2708" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[2708]一个小组的最大实力值.go" />
+              <option name="titleSlug" value="maximum-strength-of-a-group" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[2860]让所有学生保持开心的分组方法数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[2860]让所有学生保持开心的分组方法数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2860" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[2860]让所有学生保持开心的分组方法数.go" />
+              <option name="titleSlug" value="happy-students" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[3001]捕获黑皇后需要的最少移动次数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[3001]捕获黑皇后需要的最少移动次数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3001" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[3001]捕获黑皇后需要的最少移动次数.go" />
+              <option name="titleSlug" value="minimum-moves-to-capture-the-queen" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[3007]价值和小于等于 K 的最大数字.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[3007]价值和小于等于 K 的最大数字.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3007" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[3007]价值和小于等于 K 的最大数字.go" />
+              <option name="titleSlug" value="maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[3148]矩阵中的最大得分.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[3148]矩阵中的最大得分.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3148" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[3148]矩阵中的最大得分.go" />
+              <option name="titleSlug" value="maximum-difference-score-in-a-grid" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[3243]新增道路查询后的最短距离 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[3243]新增道路查询后的最短距离 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3243" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[3243]新增道路查询后的最短距离 I.go" />
+              <option name="titleSlug" value="shortest-distance-after-road-addition-queries-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[3254]长度为 K 的子数组的能量值 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[3254]长度为 K 的子数组的能量值 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3254" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[3254]长度为 K 的子数组的能量值 I.go" />
+              <option name="titleSlug" value="find-the-power-of-k-size-subarrays-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

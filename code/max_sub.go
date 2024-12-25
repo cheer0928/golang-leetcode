@@ -1,6 +1,7 @@
 package code
 
 import (
+	"bytes"
 	"math"
 	"math/bits"
 	"slices"
@@ -986,7 +987,89 @@ func abs(x int) int {
 	return x
 }
 func maxVowels(s string, k int) int {
-	return 0
+	left := 0
+	right := 0
+	var vowels = [5]byte{'a', 'e', 'i', 'o', 'u'}
+	var count, maxCount = 0, 0
+	for right < len(s) {
+		if bytes.IndexByte(vowels[:], s[right]) >= 0 {
+			count++
+		}
+		right++
+		if right-left > k {
+			if bytes.IndexByte(vowels[:], s[left]) >= 0 {
+				count--
+			}
+			left++
+		}
+		if count > maxCount {
+			maxCount = count
+		}
+	}
+	return maxCount
+}
+func numOfSubarrays(arr []int, k int, threshold int) int {
+	var left, right, total, count = 0, 0, 0, 0
+	for right < len(arr) {
+		total += arr[right]
+		if right-left+1 > k {
+			total -= arr[left]
+			left++
+		}
+		if right-left+1 == k && total/k >= threshold {
+			count++
+		}
+		right++
+	}
+	return count
+}
+
+func getAverages(nums []int, k int) []int {
+	res := make([]int, len(nums))
+	n := len(nums)
+	windowSize := 2*k + 1
+	if n < windowSize {
+		for i := range res {
+			res[i] = -1
+		}
+		return res
+	}
+	sum := 0
+	// 初始化结果数组为 -1
+	for i := range res {
+		res[i] = -1
+	}
+
+	for i := 0; i < n; i++ {
+		sum += nums[i]
+		if i >= windowSize {
+			center := i - k
+			res[center] = sum / windowSize
+			sum -= nums[i-windowSize+1]
+		}
+	}
+	return res
+}
+
+func maxSatisfied(customers []int, grumpy []int, minutes int) int {
+	length, baseSatisfaction, maxSum, extraSatisfaction := len(customers), 0, 0, 0
+	for i := 0; i < len(customers); i++ {
+		if grumpy[i] == 0 {
+			baseSatisfaction += customers[i]
+		}
+	}
+	for i := 0; i < length; i++ {
+		if grumpy[i] == 1 {
+			extraSatisfaction += customers[i]
+		}
+		if i >= minutes && grumpy[i-minutes] == 1 {
+			if grumpy[i-minutes] == 1 {
+				extraSatisfaction -= customers[i-minutes]
+			}
+		}
+		maxSum = max(maxSum, extraSatisfaction)
+	}
+	return maxSum + baseSatisfaction
 }
 
 // 实现 min 函数
