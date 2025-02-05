@@ -1071,6 +1071,69 @@ func maxSatisfied(customers []int, grumpy []int, minutes int) int {
 	}
 	return maxSum + baseSatisfaction
 }
+func maxSum(nums []int, m int, k int) int64 {
+	sum, maxSum, left := 0, 0, 0
+	windowMap := make(map[int]int)
+	for cur := range nums {
+		windowMap[nums[cur]]++
+		sum += nums[cur]
+		if cur-left+1 > k {
+			windowMap[nums[left]]--
+			if windowMap[nums[left]] == 0 {
+				delete(windowMap, nums[left])
+			}
+			sum -= nums[left]
+			left++
+		}
+		if cur-left+1 == k && len(windowMap) >= m {
+			maxSum = max(maxSum, sum)
+		}
+	}
+	return int64(maxSum)
+}
+func maximumSubarraySum(nums []int, k int) int64 {
+	left, maxSum, curSum := 0, 0, 0
+	windowMap := make(map[int]bool)
+	for cur := range nums {
+		curSum += nums[cur]
+		if windowMap[nums[cur]] || cur-left+1 > 0 {
+			curSum -= nums[left]
+			windowMap[nums[left]] = false
+			left++
+		} else if cur-left+1 == k {
+			windowMap[nums[cur]] = true
+			maxSum = max(maxSum, curSum)
+		} else {
+			windowMap[nums[left]] = true
+		}
+		maxSum = max(maxSum, curSum)
+	}
+	return int64(maxSum)
+}
+
+func hasAllCodes(s string, k int) bool {
+	if len(s) < 2*k {
+		return false
+	}
+	res := make([]bool, 1<<k)
+	left, cur, sum := 0, 1, int(s[0]-'0')<<(k-1)
+	for cur < len(s) {
+		sum = ((sum << 1) & (1<<k - 1)) | int(s[cur]-'0')
+		if cur-left+1 >= k {
+			res[sum] = true
+			left++
+		}
+		cur++
+	}
+	flag := true
+	for i := 0; i < 1<<k; i++ {
+		if res[i] == false {
+			flag = false
+			break
+		}
+	}
+	return flag
+}
 
 // 实现 min 函数
 func minFour(a, b, c, d int) int {

@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[1461]检查一个字符串是否包含所有长度为 K 的二进制子串.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[1461]检查一个字符串是否包含所有长度为 K 的二进制子串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1461" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[1461]检查一个字符串是否包含所有长度为 K 的二进制子串.go" />
+              <option name="titleSlug" value="check-if-a-string-contains-all-binary-codes-of-size-k" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="E:/study/codeStudy/leetcode/editor/cn/[1884]鸡蛋掉落-两枚鸡蛋.go">
           <value>
             <LeetcodeEditor>
