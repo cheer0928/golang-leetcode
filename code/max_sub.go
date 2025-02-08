@@ -810,25 +810,25 @@ func isArraySpecial(nums []int, queries [][]int) []bool {
 	return res
 }
 
-func maxScore(grid [][]int) int {
-	lowScoreGrid := make([][]int, len(grid)+1)
-	res := math.MinInt
-	lowScoreGrid[0] = make([]int, len(grid[0])+1)
-	for i := range lowScoreGrid[0] {
-		lowScoreGrid[0][i] = math.MaxInt
-	}
-	for i, nums := range grid {
-		lowScoreGrid[i+1] = make([]int, len(nums)+1)
-		lowScoreGrid[i+1][0] = math.MaxInt
-		for j, num := range nums {
-			lowScoreGrid[i+1][j+1] = min(lowScoreGrid[i][j+1], lowScoreGrid[i+1][j])
-			nowMax := num - lowScoreGrid[i+1][j+1]
-			lowScoreGrid[i+1][j+1] = min(lowScoreGrid[i+1][j+1], num)
-			res = max(res, nowMax)
-		}
-	}
-	return res
-}
+//func maxScore(grid [][]int) int {
+//	lowScoreGrid := make([][]int, len(grid)+1)
+//	res := math.MinInt
+//	lowScoreGrid[0] = make([]int, len(grid[0])+1)
+//	for i := range lowScoreGrid[0] {
+//		lowScoreGrid[0][i] = math.MaxInt
+//	}
+//	for i, nums := range grid {
+//		lowScoreGrid[i+1] = make([]int, len(nums)+1)
+//		lowScoreGrid[i+1][0] = math.MaxInt
+//		for j, num := range nums {
+//			lowScoreGrid[i+1][j+1] = min(lowScoreGrid[i][j+1], lowScoreGrid[i+1][j])
+//			nowMax := num - lowScoreGrid[i+1][j+1]
+//			lowScoreGrid[i+1][j+1] = min(lowScoreGrid[i+1][j+1], num)
+//			res = max(res, nowMax)
+//		}
+//	}
+//	return res
+//}
 
 func findMaximumNumber(k int64, x int) int64 {
 	ans := sort.Search(int(k+1)<<x, func(num int) bool {
@@ -1095,20 +1095,42 @@ func maximumSubarraySum(nums []int, k int) int64 {
 	left, maxSum, curSum := 0, 0, 0
 	windowMap := make(map[int]bool)
 	for cur := range nums {
-		curSum += nums[cur]
-		if windowMap[nums[cur]] || cur-left+1 > 0 {
+		for windowMap[nums[cur]] || cur-left >= k {
 			curSum -= nums[left]
 			windowMap[nums[left]] = false
 			left++
-		} else if cur-left+1 == k {
-			windowMap[nums[cur]] = true
-			maxSum = max(maxSum, curSum)
-		} else {
-			windowMap[nums[left]] = true
 		}
-		maxSum = max(maxSum, curSum)
+		curSum += nums[cur]
+		windowMap[nums[cur]] = true
+		if cur-left+1 == k {
+			maxSum = max(maxSum, curSum)
+		}
 	}
 	return int64(maxSum)
+}
+func maxScore(cardPoints []int, k int) int {
+	n := len(cardPoints)
+	windowSize := n - k
+	totalSum := 0
+	for _, point := range cardPoints {
+		totalSum += point
+	}
+	if windowSize == 0 {
+		return totalSum
+	}
+	minSum, windowSum := math.MaxInt32, 0
+	left, right := 0, 0
+	for ; right < len(cardPoints); right++ {
+		if right-left+1 > windowSize {
+			windowSum -= cardPoints[left]
+			left++
+		}
+		windowSum += cardPoints[right]
+		if right-left+1 == windowSize {
+			minSum = min(minSum, windowSum)
+		}
+	}
+	return totalSum - minSum
 }
 
 func hasAllCodes(s string, k int) bool {

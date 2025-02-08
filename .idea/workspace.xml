@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2bb49da-38c3-4961-a5c6-784079982e14" name="更改" comment="feature add">
-      <change beforePath="$PROJECT_DIR$/.idea/labuladong/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/labuladong/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/labuladong/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/labuladong/statistics.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/max_sub.go" beforeDir="false" afterPath="$PROJECT_DIR$/code/max_sub.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +43,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Code Search"
+    "settings.editor.selected.configurable": "labuladong.id"
   }
 }]]></component>
   <component name="SharedIndexes">

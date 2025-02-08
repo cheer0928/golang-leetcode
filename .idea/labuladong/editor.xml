@@ -25,6 +25,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[1423]可获得的最大点数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[1423]可获得的最大点数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1423" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[1423]可获得的最大点数.go" />
+              <option name="titleSlug" value="maximum-points-you-can-obtain-from-cards" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="E:/study/codeStudy/leetcode/editor/cn/[1456]定长子串中元音的最大数目.go">
           <value>
             <LeetcodeEditor>
@@ -47,6 +58,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[146]LRU 缓存.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[146]LRU 缓存.md" />
+              <option name="frontendQuestionId" value="leetcode.cn146" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[146]LRU 缓存.go" />
+              <option name="titleSlug" value="lru-cache" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="E:/study/codeStudy/leetcode/editor/cn/[1884]鸡蛋掉落-两枚鸡蛋.go">
           <value>
             <LeetcodeEditor>
@@ -66,6 +88,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[2090]半径为 k 的子数组平均值.go" />
               <option name="titleSlug" value="k-radius-subarray-averages" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="E:/study/codeStudy/leetcode/editor/cn/[2461]长度为 K 子数组中的最大和.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="E:/study/codeStudy/leetcode/editor/cn/doc/content/[2461]长度为 K 子数组中的最大和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2461" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="E:/study/codeStudy/leetcode/editor/cn/[2461]长度为 K 子数组中的最大和.go" />
+              <option name="titleSlug" value="maximum-sum-of-distinct-subarrays-with-length-k" />
             </LeetcodeEditor>
           </value>
         </entry>
