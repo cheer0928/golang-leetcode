@@ -1157,6 +1157,28 @@ func hasAllCodes(s string, k int) bool {
 	return flag
 }
 
+func numKLenSubstrNoRepeats(s string, k int) int {
+	if len(s) < k {
+		return 0
+	}
+	numNumMap := make(map[byte]bool)
+	count := 0
+	left := 0
+	for right := 0; right < len(s); right++ {
+		for numNumMap[s[right]] {
+			delete(numNumMap, s[left])
+			left++
+		}
+		numNumMap[s[right]] = true
+		if right-left+1 == k {
+			count++
+			delete(numNumMap, s[left])
+			left++
+		}
+	}
+	return count
+}
+
 // 实现 min 函数
 func minFour(a, b, c, d int) int {
 	min := a
