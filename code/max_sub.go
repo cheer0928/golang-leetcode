@@ -1179,6 +1179,29 @@ func numKLenSubstrNoRepeats(s string, k int) int {
 	return count
 }
 
+func distinctNumbers(nums []int, k int) []int {
+	ans := make([]int, len(nums)-k+1)
+	windowsMap := make(map[int]int)
+	count, left := 0, 0
+	for i := 0; i < len(nums); i++ {
+		if i-left+1 > k {
+			windowsMap[nums[left]]--
+			if windowsMap[nums[i]] == 0 {
+				count--
+			}
+			left++
+		}
+		windowsMap[nums[i]]++
+		if windowsMap[nums[i]] == 1 {
+			count++
+		}
+		if i >= k-1 {
+			ans[i-k+1] = count
+		}
+	}
+	return ans
+}
+
 // 实现 min 函数
 func minFour(a, b, c, d int) int {
 	min := a
@@ -1192,6 +1215,52 @@ func minFour(a, b, c, d int) int {
 		min = d
 	}
 	return min
+}
+
+func minSwaps(data []int) int {
+	count, left, ones := 0, 0, 0
+	windowSize := 0
+	for i := range data {
+		if data[i] == 1 {
+			windowSize++
+		}
+	}
+	for i := range data {
+		if data[i] == 1 {
+			ones++
+		}
+		if i-left+1 == windowSize {
+			count = max(count, ones)
+			if data[left] == 1 {
+				ones--
+			}
+			left++
+		}
+	}
+	return windowSize - count
+}
+
+func shareCandies(candies []int, k int) int {
+	totalDifferent, uniqueCount := 0, 0
+	candiesMap := make(map[int]int)
+	for i := 0; i < k; i++ {
+		if candiesMap[candies[i]] == 0 {
+			uniqueCount++
+		}
+		candiesMap[candies[i]]++
+	}
+	totalDifferent = uniqueCount
+	for i := k; i < len(candies); i++ {
+		if candiesMap[candies[i-k]] == 1 {
+			uniqueCount--
+		}
+		if candiesMap[candies[i]] == 0 {
+			uniqueCount++
+		}
+		candiesMap[candies[i]]++
+		totalDifferent = max(totalDifferent, uniqueCount)
+	}
+	return totalDifferent
 }
 
 // 实现 max 函数
